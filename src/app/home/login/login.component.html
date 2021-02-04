@@ -1,0 +1,32 @@
+<div class="row justify-content-center distance">
+    <div class="col-lg-5 col-md-7 mt-4">
+        <div class="card bg-info border-0">
+            <div class="card-body px-lg-5 py-lg-5">   
+                    <ul class="list-group">
+                        <li class="list-group-item">
+
+                            <p class="text-dark">Nombre de usuario o correo electronico</p>
+                            <input #Username type="text" class="form-control" placeholder="Username/name@example.com"
+                                aria-label="Username" aria-describedby="basic-addon1">
+
+                        </li>
+                        <li class="list-group-item">
+                            <p class="text-dark">Contraseña</p>
+                            <input #Password type="password" class="form-control" id="exampleInputPassword1">
+                        </li>
+
+                    </ul>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <p class="text-light">Guardar credencial</p>
+                        
+                    </div>
+                    <div class="col text-center">
+                        <button  class="btn btn-light" (click)="verifyUser(Username.value,Password.value)">
+                        Iniciar sesion
+                    </button>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

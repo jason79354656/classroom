@@ -1,0 +1,21 @@
+
+
+
+<div style="padding:10px">
+    <app-register-mat (code_mat)="modal_codemat($event)"></app-register-mat>
+</div>
+
+<div class="container separation">
+   <p>{{code_mate}}</p>
+    <div class="row row-cols-1 row-cols-md-3">
+        
+        <app-classroom 
+            *ngFor="let classroom of classrooms; index as i"
+            [classroom] = "classroom"
+        >
+
+        </app-classroom>
+     
+     </div>
+ </div>
+

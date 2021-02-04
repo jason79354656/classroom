@@ -1,0 +1,25 @@
+<div class="card container">
+    <h1>Crear curso</h1>
+    <section>
+        <input type="file"  (change)="uploapClassImage($event)">
+            <div [hidden]="!uploadPercent">
+        </div>
+       <div class="image-preview"  [hidden]="!imageURL">
+            <img [src]="imageURL || '//:0'" style="width: 400px; height: 400px;">
+        </div>
+
+    </section>
+    <section>
+        <form  [formGroup]="classroomForm" (ngSubmit)="saveClass(classroomForm.value)">
+
+            <label for="title">titulo de clase</label>
+            <input formControlName="name" type="text" class="form-control" id="name">
+
+            <label>description</label>
+            <textarea class="form-control" type="text" rows="3" formControlName="description"></textarea>
+            <br>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+    </section>
+
+</div>

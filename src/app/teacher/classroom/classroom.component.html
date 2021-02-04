@@ -1,0 +1,12 @@
+<div class="col mb-4">
+    <div class="card h-100">
+    <h5>El codigo  de la materia es{{classroom.codeMat}}</h5>
+     <img src={{classroom.img}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{classroom.name}}</h5>
+            <p class="card-text">{{classroom.description}}</p>
+            <a (click)="enterMateria(classroom.id)" class="btn btn-primary">Go to matter</a>
+           
+        </div>
+    </div>
+</div>

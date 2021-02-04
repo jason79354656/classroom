@@ -1,0 +1,26 @@
+<div class="card container " style="background-color: #4C2882" >
+    <a>postea actividades, tareas, avisos, archivos ...</a>
+    <h1>Publicar Tarea</h1>
+    <section>
+        <input type="file" name="file" id="file" (change)="uploapTaskFile($event)">
+
+        <div class="image-preview" [hidden]="!imageURL">
+            <!-- <img [src]="imageURL || '//:0'" style="width: 400px; height: 400px;"> -->
+            <div class="card"><a style="color: darkslateblue;">{{imageURL}}</a></div>
+        </div>
+
+    </section>
+    <section>
+        <form [formGroup]='taskForm' (ngSubmit)="postTask(taskForm.value)">
+
+            <label for="title">titulo de tarea</label>
+            <input formControlName="title" type="email" class="form-control" id="email">
+
+            <label>Descripcion</label>
+            <textarea class="form-control" id="content" rows="3" formControlName="content"></textarea>
+            <br>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+    </section>
+
+</div>

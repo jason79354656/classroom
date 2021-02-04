@@ -1,0 +1,38 @@
+
+  
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="showModal()">
+            Inscribirse a una materia
+          </button>
+    
+  
+<div class="container">
+
+    
+</div>
+  <!-- Modal -->
+  <div class="modal" [class.show]="show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Codigo</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                      <div class="input-group">
+                          <span class="input-group-addon"><label for="editOwnerName">codigo de clase</label></span>
+                          <input #mat_code type="text" class="form-control" name="codigo" id="codigo" [(ngModel)]="codigo" placeholder=""
+                           autofocus autocomplete="off" />
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="showModal()">Close</button>
+                  <button type="button" class="btn btn-primary"  (click)="procesar(mat_code.value)"  >Save changes</button>
+              </div>
+          </div>
+      </div>
+  </div>

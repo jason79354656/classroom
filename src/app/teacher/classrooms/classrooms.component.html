@@ -1,0 +1,21 @@
+<button type="button"  (click)="addclassrom()" class="btn btn-primary"   >
+    Crear Materia
+  </button>
+
+<button type="button" (click)="addActivity()" class="btn btn-primary">
+    Crear Actividad de materia
+</button>
+
+<div class="container separation">
+   <p>{{code_mate}}</p>
+    <div class="row row-cols-1 row-cols-md-3">
+        <app-classroom 
+            *ngFor="let classroom of classrooms; index as i"
+            [classroom] = "classroom"
+        >
+
+        </app-classroom>
+     
+     </div>
+ </div>
+ 
